@@ -1,11 +1,12 @@
 class UserSessionsController < ApplicationController
+  before_action :require_login, only: %i[new create]#「loginが必要な場合でもnewとcreateアクションだけはできるよ」
 
   def new; end
 
   def create
     @user = login(params[:email], params[:password])
     if @user
-      redirect_back_or_to root_path, success: t('.success')
+      redirect_back_or_to boards_path, success: t('.success')
     else
       flash.now[:danger] = t('.fail')
       render :new
