@@ -1,4 +1,4 @@
 class StaticPagesController < ApplicationController
-  def top
-  end
+  before_action :require_login, only: %i[top]
+  def top;
 end
