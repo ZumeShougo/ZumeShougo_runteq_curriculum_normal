@@ -8,6 +8,8 @@ ja:
       require_login: 'ログインしてください'
       created: '%{item}を作成しました'
       not_created: '%{item}を作成できませんでした'
+      update: '%{item}を更新しました'
+      delete_confirm: '削除しますか？'
   users:
     new:
       title: 'ユーザー登録'
@@ -33,6 +35,8 @@ ja:
       title: '掲示板作成'
     show:
       title: '掲示板詳細'
+    edit:
+      title: '掲示板編集'
     bookmarks:
       title: 'ブックマーク一覧'
   profiles:
