@@ -8,8 +8,9 @@ ja:
       require_login: 'ログインしてください'
       created: '%{item}を作成しました'
       not_created: '%{item}を作成できませんでした'
-      update: '%{item}を更新しました'
+      updated: '%{item}を更新しました'
       delete_confirm: '削除しますか？'
+      deleted: '削除が完了しました'
   users:
     new:
       title: 'ユーザー登録'
