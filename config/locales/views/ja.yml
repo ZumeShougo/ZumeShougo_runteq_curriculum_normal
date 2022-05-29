@@ -7,7 +7,9 @@ ja:
     message:
       require_login: 'ログインしてください'
       created: '%{item}を作成しました'
+      created_comment: 'コメントを作成しました'
       not_created: '%{item}を作成できませんでした'
+      not_created_comment: 'コメントを作成できませんでした'
       updated: '%{item}を更新しました'
       delete_confirm: '削除しますか？'
       deleted: '削除が完了しました'
