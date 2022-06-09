@@ -1,5 +1,5 @@
 class UserSessionsController < ApplicationController
-  before_action :require_login, only: %i[new create]#「loginが必要な場合でもnewとcreateアクションだけはできるよ」
+  skip_before_action :require_login, only: %i[new create]#「loginが必要な場合でもnewとcreateアクションだけはできるよ」
 
   def new; end
 
