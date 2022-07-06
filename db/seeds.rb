@@ -22,3 +22,8 @@ end
       body: "本文#{index}"
   )
 end
+
+Admin.create(
+      email: 'admin@example.com',
+      password: 'password',
+)
