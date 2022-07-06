@@ -2,6 +2,7 @@ class Admin::UserSessionsController < Admin::BaseController
   skip_before_action :require_login, only: %i[new create]
   skip_before_action :check_admin, only: %i[new create]
   layout 'layouts/admin_login'
+
   def new; end
 
   def create
@@ -9,7 +10,7 @@ class Admin::UserSessionsController < Admin::BaseController
     if @user
       redirect_to admin_root_path, success: t('.success')
     else
-      flash.now[:danger] = t('.fail')#現在のアクションのみ有効な「flash.now」
+      flash.now[:danger] = t('.fail')
       render :new
     end
   end
