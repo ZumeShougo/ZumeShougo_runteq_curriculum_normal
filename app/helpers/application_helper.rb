@@ -8,4 +8,8 @@ module ApplicationHelper
 
     page_title.empty? ? base_title : page_title + ' | ' + base_title  #三項演算子を用いている
   end
+
+  def active_if(path)
+    path == controller_path ? 'active' : ''
+  end
 end
