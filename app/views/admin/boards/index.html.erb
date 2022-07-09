@@ -11,23 +11,23 @@
       <table class="table table-striped">
         <thead>
         <tr>
-          <th scope="col"><%= User.human_attribute_name(:id) %></th>
-          <th scope="col"><%= User.human_attribute_name(:full_name) %></th>
-          <th scope="col"><%= User.human_attribute_name(:role) %></th>
-          <th scope="col"><%= User.human_attribute_name(:created_at) %></th>
+          <th scope="col"><%= Board.human_attribute_name(:id) %></th>
+          <th scope="col"><%= Board.human_attribute_name(:タイトル) %></th>
+          <th scope="col"><%= Board.human_attribute_name(:ユーザー) %></th>
+          <th scope="col"><%= Board.human_attribute_name(:作成日) %></th>
           <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
-        <%= render @users %>
+        <%= render @boards %>
         </tbody>
       </table>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      <!-- ページネーション -->
-      <%= paginate @users, theme: 'twitter-bootstrap-4' %>
+     <!-- ページネーション -->
+      <%= paginate @boards, theme: 'twitter-bootstrap-4' %>
     </div>
   </div>
 </div>
