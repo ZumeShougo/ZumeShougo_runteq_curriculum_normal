@@ -3,7 +3,7 @@ class Admin::BoardsController < Admin::BaseController
 
   def index
     @q = Board.ransack(params[:q])
-    @board = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
+    @boards = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def show; end
@@ -30,6 +30,6 @@ class Admin::BoardsController < Admin::BaseController
   end
 
   def board_params
-    params.require(:board).permit(:title, :board, :board_image, :board_image_cache)
+    params.require(:board).permit(:title, :body, :board_image, :board_image_cache)
   end
 end
